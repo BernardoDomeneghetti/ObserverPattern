@@ -4,6 +4,7 @@ using ObserverPattern.Abstractions.Application.Services;
 using ObserverPattern.Application.Commands;
 using ObserverPattern.Application.Extensions;
 using ObserverPattern.Application.Responses;
+using ObserverPattern.Domain.Enums;
 using ObserverPattern.Infrastructure.Extensions;
 
 namespace ObserverPattern.Console;
@@ -26,8 +27,16 @@ internal class Program
         {
             ProductId = 1,
             MovementAmount = 10,
-            MovementType = Domain.Enums.StorageMovementType.In,
+            MovementType = StorageMovementType.In,
             MovementDescription = "Adding stock to product"
+        }).GetAwaiter().GetResult();
+
+        applicationService.ExecuteAsync(new UpdateProductStorageCommand
+        {
+            ProductId = 1,
+            MovementAmount = 10,
+            MovementType = StorageMovementType.Out,
+            MovementDescription = "Removing stock from product"
         }).GetAwaiter().GetResult();
 
         

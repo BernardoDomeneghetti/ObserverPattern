@@ -1,8 +1,8 @@
 using System;
 using Microsoft.Extensions.DependencyInjection;
-using ObserverParttern.Infrastructure.Repositories;
 using ObserverPattern.Application.Abstractions.Repositories;
 using ObserverPattern.Domain.Models;
+using ObserverPattern.Infrastructure.Repositories;
 
 namespace ObserverPattern.Infrastructure.Extensions;
 

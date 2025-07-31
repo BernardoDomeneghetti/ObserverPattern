@@ -1,9 +1,9 @@
+using System;
 using ObserverPattern.Abstractions.Application.Dtos;
 
 namespace ObserverPattern.Application.Responses;
 
-public record class UpdateStorageProductResponse(string message): IResponse
+public class ProductReorderResponse(string message) : IResponse
 {
-
     public string Message { get; set; } = message;
 }

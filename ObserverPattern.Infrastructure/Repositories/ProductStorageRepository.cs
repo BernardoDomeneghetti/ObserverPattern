@@ -2,7 +2,7 @@ using System;
 using ObserverPattern.Application.Abstractions.Repositories;
 using ObserverPattern.Domain.Models;
 
-namespace ObserverParttern.Infrastructure.Repositories;
+namespace ObserverPattern.Infrastructure.Repositories;
 
 public class ProductStorageRepository: IRepository<ProductStorage>
 {
@@ -16,5 +16,6 @@ public class ProductStorageRepository: IRepository<ProductStorage>
     {
         await Task.Delay(100); // Simulate async operation
         _storage.Add(entity);
+        Console.WriteLine($"[Repository] - Product storage updated: ProductId={entity.ProductId}, MovementType={entity.MovementType}, Amount={entity.MovementAmount}");
     }
 }
