@@ -16,7 +16,7 @@ public class UpdateProductStorageCommandToProductStorageMapper:IMapper<UpdatePro
             ProductId = source.ProductId,
             MovementAmount = source.MovementAmount,
             MovementType = source.MovementType,
-            Description = source.Description
+            Description = source.MovementDescription
         };
     }
 }
