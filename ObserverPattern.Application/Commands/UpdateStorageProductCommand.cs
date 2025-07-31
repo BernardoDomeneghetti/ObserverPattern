@@ -8,5 +8,5 @@ public record class UpdateProductStorageCommand: IRequest
     public int ProductId { get; set; }
     public decimal MovementAmount { get; set; }
     public StorageMovementType MovementType { get; set; }
-    public string Description { get; set; } = string.Empty;
+    public string MovementDescription { get; set; }
 }
